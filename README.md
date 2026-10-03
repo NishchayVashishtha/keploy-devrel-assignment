@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Automating Go API Tests with Keploy (DevRel Assignment)
 
-## Getting Started
+An interactive, single-page developer documentation website built for the **Keploy DevRel Candidate Assignment**. This guide demonstrates zero-code API testing, network mocking, and non-deterministic noise handling for a **Gin + MongoDB URL Shortener** application.
 
-First, run the development server:
+---
 
+## 🌟 Live Demo & Preview
+
+- **Live Documentation:** [Deployed on Vercel](#) *(Add your live Vercel URL here)*
+- **GitHub Repository:** [keploy-go-tutorial](https://github.com/your-username/keploy-go-tutorial)
+
+---
+
+## 🚀 Features & Highlights
+
+- **Authentic Developer Experience:** Written from real hands-on execution of the Keploy Go Quickstart (Gin + Mongo), documenting real debugging journeys (e.g., MongoDB URI scheme fix in `handler.go` and WSL 2 eBPF configuration).
+- **Interactive MDX Architecture:** Built with Next.js App Router and MDX (`.mdx`), embedding custom interactive React components alongside technical prose.
+- **Interactive Architecture Diagram:** Visual toggle demonstrating **Record Mode** vs. **Replay Mode** at the network interception layer.
+- **Real Test Fixture Inspector:** Tabbed viewer displaying the exact YAML test case (`post-url-1.yaml`) and intercepted MongoDB wire protocol mocks (`mocks.yaml`) generated during the run.
+- **Noise Filter Deep-Dive:** Explaining how Keploy eliminates flaky test false-positives by automatically muting dynamic fields (`body.ts` timestamp and `header.Date`).
+- **Dark & Light Mode:** Seamless theme toggle powered by `next-themes` with tailored Tailwind CSS styling.
+- **Sticky Table of Contents:** Smooth scroll tracking and section jumping for enhanced reader UX.
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework:** Next.js (App Router, Turbopack)
+- **Content:** MDX (`@next/mdx`)
+- **Styling:** Tailwind CSS v4 (`@tailwindcss/typography`)
+- **Theming:** `next-themes`
+- **Icons:** `lucide-react`
+- **Target Quickstart:** Keploy CLI (v3.8.57), Go 1.22, Gin Gonic, MongoDB 6.0, Docker Compose
+
+---
+
+## 💻 Running Locally
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/keploy-go-tutorial.git
+cd keploy-go-tutorial
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Run development server
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+### 4. Build for production
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Repository Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+├── app/
+│   ├── globals.css          # Tailwind CSS v4 styling & dark theme variants
+│   ├── layout.tsx           # Root layout with responsive header, TOC, and footer
+│   └── page.mdx             # Main tutorial content with embedded interactive components
+├── components/
+│   ├── ArchitectureDiagram.tsx  # Interactive flow diagram (Record vs. Replay)
+│   ├── Callout.tsx              # Rich alert callouts (info, warning, tip, aha, success)
+│   ├── CodeBlock.tsx            # Code snippet wrapper with copy-to-clipboard
+│   ├── ComparisonTable.tsx      # Traditional vs. Keploy testing comparison
+│   ├── TableOfContents.tsx      # Sticky on-page navigation
+│   ├── ThemeProvider.tsx        # Next-themes client provider
+│   └── ThemeToggle.tsx          # Animated Dark/Light toggle
+├── mdx-components.tsx       # Root MDX component definitions & typography mapping
+└── package.json
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 👤 Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Nishchay Vashishtha** — Keploy DevRel Candidate
