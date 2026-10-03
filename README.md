@@ -6,8 +6,8 @@ An interactive, single-page developer documentation website built for the **Kepl
 
 ## 🌟 Live Demo & Preview
 
-- **Live Documentation:** [Deployed on Vercel](#) *(Add your live Vercel URL here)*
-- **GitHub Repository:** [keploy-go-tutorial](https://github.com/your-username/keploy-go-tutorial)
+- **Live Documentation:** [keploy-devrel-assignment-three.vercel.app](https://keploy-devrel-assignment-three.vercel.app/)
+- **GitHub Repository:** [NishchayVashishtha/keploy-devrel-assignment](https://github.com/NishchayVashishtha/keploy-devrel-assignment)
 
 ---
 
@@ -38,8 +38,8 @@ An interactive, single-page developer documentation website built for the **Kepl
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/keploy-go-tutorial.git
-cd keploy-go-tutorial
+git clone https://github.com/NishchayVashishtha/keploy-devrel-assignment.git
+cd keploy-devrel-assignment
 ```
 
 ### 2. Install dependencies
